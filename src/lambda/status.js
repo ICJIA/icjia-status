@@ -46,6 +46,17 @@ const servers = [
     },
     category: "api"
   },
+  {
+    name: "ICJIA document archive api server",
+    proto: "https",
+    options: {
+      hostname: `archive.icjia-api.cloud`,
+      path: "/",
+      method: "HEAD"
+    },
+
+    category: "api"
+  },
 
   {
     name: "ICJIA document archive",
@@ -110,28 +121,6 @@ const servers = [
     },
     category: "web",
     actualPath: "https://icjia.illinois.gov/researchhub/docs"
-  },
-  {
-    name: "ICJIA ResearchHub Studio",
-    proto: "https",
-    options: {
-      hostname: `researchhub-studio.netlify.com`,
-      path: "/",
-      method: "HEAD"
-    },
-    category: "web",
-    actualPath: "https://icjia.illinois.gov/researchhub/studio"
-  },
-  {
-    name: "ICJIA ResearchHub Preview",
-    proto: "https",
-    options: {
-      hostname: `researchhub-preview.netlify.com`,
-      path: "/",
-      method: "HEAD"
-    },
-    category: "web",
-    actualPath: "https://icjia.illinois.gov/researchhub/preview"
   },
 
   {
@@ -203,6 +192,7 @@ exports.handler = async (event, context) => {
     }
   });
   let response = await Promise.all(serverArr);
+
   return {
     statusCode: 200,
     headers,
