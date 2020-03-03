@@ -1,0 +1,10 @@
+  
+[build]
+    Command = "npm run build"
+    Functions = "netlify"
+    Publish = "dist"
+  
+[[headers]]
+    for = "/*"
+[headers.values]
+    Access-Control-Allow-Origin = "*"

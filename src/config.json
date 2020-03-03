@@ -1,0 +1,31 @@
+{
+  "clientBase": "https://icjia.illinois.gov",
+  "publicPath": "/status",
+  "namespace": "icjia-",
+  "siteTitle": "Web Status",
+  "siteTitleMobile": "Web Status",
+  "homeHeading": "WEB STATUS",
+  "githubURL": "https://github.com/ICJIA/icjia-status",
+  "siteDescription": "ICJIA real-time web status updates.",
+  "searchConfig": {
+    "shouldSort": true,
+    "includeMatches": true,
+    "tokenize": true,
+    "threshold": 0.6,
+    "location": 0,
+    "distance": 100,
+    "maxPatternLength": 32,
+    "minMatchCharLength": 2,
+    "keys": ["title", "summary", "headings.heading", "type", "name"]
+  },
+  "debug": true,
+  "markdownItOptions": {
+    "html": true,
+    "xhtmlOut": false,
+    "breaks": false,
+    "langPrefix": "language-",
+    "linkify": true,
+    "typographer": false,
+    "quotes": "“”‘’"
+  }
+}

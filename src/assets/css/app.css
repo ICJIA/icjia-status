@@ -1,0 +1,44 @@
+body {
+  font-family: "Roboto", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+.markdown-body table td,
+.markdown-body table th {
+  font-family: "Roboto", sans-serif !important;
+}
+
+h1 {
+  font-weight: 900 !important;
+}
+
+h2 {
+  font-weight: 700 !important;
+  color: #555;
+  padding-top: 20px;
+}
+
+a {
+  font-weight: bold;
+}
+
+details {
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+summary {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.hover {
+  cursor: pointer;
+}
