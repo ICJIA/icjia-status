@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ec8416ef-1c8e-495c-a2d6-500f1a03af36/deploy-status)](https://app.netlify.com/sites/icjia-status/deploys)(https://app.netlify.com/sites/gatadev/deploys) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ec8416ef-1c8e-495c-a2d6-500f1a03af36/deploy-status)](https://app.netlify.com/sites/icjia-status/deploys) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # ICJIA Site Status
 
