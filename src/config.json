@@ -4,6 +4,7 @@
   "namespace": "icjia-",
   "siteTitle": "Web Status",
   "siteTitleMobile": "Web Status",
+  "deploymentURL": "https://icjia-status.netlify.com/",
   "homeHeading": "WEB STATUS",
   "githubURL": "https://github.com/ICJIA/icjia-status",
   "siteDescription": "ICJIA real-time web status updates.",
