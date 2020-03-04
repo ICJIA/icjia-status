@@ -29,13 +29,13 @@ Vue.use(VueMeta, {
   refreshOnceOnNavigation: true
 });
 
-// import VueAnalytics from "vue-analytics";
-// Vue.use(VueAnalytics, {
-//   id: "UA-xxxxxx-x",
-//   debug: {
-//     sendHitTask: process.env.NODE_ENV === "production"
-//   }
-// });
+import VueAnalytics from "vue-analytics";
+Vue.use(VueAnalytics, {
+  id: "UA-150082887-7",
+  debug: {
+    sendHitTask: process.env.NODE_ENV === "production"
+  }
+});
 
 // Set up app wide read-only configs and install as plugin
 import { myApp } from "./services/AppInit";
