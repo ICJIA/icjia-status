@@ -3,7 +3,7 @@
     <v-container class="markdown-body">
       <v-row>
         <v-col>
-          <div v-if="!loading">
+          <div v-if="!loading && items">
             <v-data-table
               :headers="headers"
               :items="items"
@@ -29,6 +29,16 @@
                   <strong> {{ item.status }}</strong>
                 </v-chip>
               </template>
+              <template v-slot:item.url="{ item }">
+                <v-btn
+                  text
+                  small
+                  @click.stop="gotoSite(item.url)"
+                  v-if="item.displayURL"
+                >
+                  <v-icon>open_in_new</v-icon>
+                </v-btn>
+              </template>
               <template v-slot:expanded-item="{ headers, item }">
                 <td :colspan="headers.length + 2">
                   <v-card class="py-2" color="grey lighten-4">
@@ -46,7 +56,7 @@
               </template>
             </v-data-table>
           </div>
-          <div v-else class="text-center mt-12">
+          <div v-if="loading" class="text-center mt-12">
             <div style="font-weight: 900; font-size: 14px;">
               Fetching status
             </div>
@@ -57,7 +67,7 @@
               class="mt-12"
             ></v-progress-circular>
           </div>
-          <div v-if="errorMsg" class="text-center">
+          <div v-if="errorMsg && !items" class="text-center">
             <v-alert type="error"> {{ errorMsg }} </v-alert>
           </div>
         </v-col>
@@ -89,7 +99,8 @@ export default {
 
         { text: "Status", value: "status", align: "center" },
         { text: "Response", value: "duration", align: "center" },
-        { text: "Build Status", value: "badgeID", align: "center" }
+        { text: "Build Status", value: "badgeID", align: "center" },
+        { text: "URL", value: "url", align: "center" }
       ]
     };
   },
@@ -110,17 +121,26 @@ export default {
           }
         }
 
+        item.url = `${item.proto}://${item.options.hostname}`;
+
+        if (item.category !== "api") {
+          item.url = item.url + item.options.path;
+        }
+
         return item;
       });
       this.items = _.orderBy(items, "name", "asc");
     } catch (e) {
-      this.errorMsg = e;
+      this.errorMsg = e.toString();
     }
 
     this.loading = false;
     NProgress.done();
   },
   methods: {
+    gotoSite(url) {
+      window.open(url);
+    },
     getStatusColor(status) {
       if (this.$myApp.config.greenStatus.includes(status)) {
         return "green darken-2";

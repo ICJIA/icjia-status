@@ -13,7 +13,8 @@ const servers = [
       path: "/healthcheck",
       method: "GET"
     },
-    category: "image"
+    category: "image",
+    displayURL: true
   },
   {
     name: "ARI api server",
@@ -23,7 +24,8 @@ const servers = [
       path: "/_health",
       method: "HEAD"
     },
-    category: "api"
+    category: "api",
+    displayURL: true
   },
 
   {
@@ -34,7 +36,8 @@ const servers = [
       path: "/_health",
       method: "HEAD"
     },
-    category: "api"
+    category: "api",
+    displayURL: true
   },
   {
     name: "SPAC",
@@ -45,7 +48,8 @@ const servers = [
       method: "HEAD"
     },
     category: "site",
-    badgeID: "71c65928-9986-4104-bd78-465726edb356"
+    badgeID: "71c65928-9986-4104-bd78-465726edb356",
+    displayURL: true
   },
   {
     name: "ICJIA ResearchHub api server",
@@ -55,7 +59,8 @@ const servers = [
       path: "/_health",
       method: "HEAD"
     },
-    category: "api"
+    category: "api",
+    displayURL: true
   },
   {
     name: "ICJIA document archive api server",
@@ -65,7 +70,7 @@ const servers = [
       path: "/",
       method: "HEAD"
     },
-
+    displayURL: true,
     category: "api"
   },
 
@@ -78,7 +83,8 @@ const servers = [
       method: "HEAD"
     },
     category: "site",
-    badgeID: "f93389c6-7593-495f-9309-6a3a9729eb81"
+    badgeID: "f93389c6-7593-495f-9309-6a3a9729eb81",
+    displayURL: true
   },
   {
     name: "ICJIA GATA website",
@@ -89,7 +95,8 @@ const servers = [
       method: "HEAD"
     },
     category: "site",
-    badgeID: "2de6c7f6-eb69-4419-baf5-7e54a8943b00"
+    badgeID: "2de6c7f6-eb69-4419-baf5-7e54a8943b00",
+    displayURL: false
   },
   {
     name: "ICJIA GATA redirect",
@@ -99,7 +106,8 @@ const servers = [
       path: "/gata",
       method: "HEAD"
     },
-    category: "redirect"
+    category: "redirect",
+    displayURL: true
   },
   {
     name: "ICJIA R3",
@@ -110,7 +118,8 @@ const servers = [
       method: "HEAD"
     },
     category: "site",
-    badgeID: "90d739fc-a5ed-459d-8616-d05a6a9e235d"
+    badgeID: "90d739fc-a5ed-459d-8616-d05a6a9e235d",
+    displayURL: false
   },
   {
     name: "ICJIA R3 redirect",
@@ -120,7 +129,8 @@ const servers = [
       path: "/r3",
       method: "HEAD"
     },
-    category: "redirect"
+    category: "redirect",
+    displayURL: true
   },
   {
     name: "ICJIA legacy grants",
@@ -131,7 +141,8 @@ const servers = [
       method: "HEAD"
     },
     category: "site",
-    badgeID: "36772a61-8687-4f4b-b7ed-75d6d3aeebf5"
+    badgeID: "36772a61-8687-4f4b-b7ed-75d6d3aeebf5",
+    displayURL: true
   },
   {
     name: "ICJIA ResearchHub",
@@ -141,7 +152,8 @@ const servers = [
       path: "/",
       method: "HEAD"
     },
-    category: "site"
+    category: "site",
+    displayURL: false
   },
   {
     name: "ICJIA ResearchHub redirect",
@@ -151,7 +163,8 @@ const servers = [
       path: "/researchhub",
       method: "HEAD"
     },
-    category: "redirect"
+    category: "redirect",
+    displayURL: true
   },
 
   {
@@ -162,7 +175,8 @@ const servers = [
       path: "/",
       method: "HEAD"
     },
-    category: "site"
+    category: "site",
+    displayURL: false
   },
   {
     name: "ICJIA ResearchHub Docs redirect",
@@ -172,7 +186,8 @@ const servers = [
       path: "/researchhub/docs",
       method: "HEAD"
     },
-    category: "redirect"
+    category: "redirect",
+    displayURL: true
   },
 
   {
@@ -183,7 +198,8 @@ const servers = [
       path: "/",
       method: "HEAD"
     },
-    category: "site"
+    category: "site",
+    displayURL: true
   },
   {
     name: "ICJIA public redirect",
@@ -193,7 +209,8 @@ const servers = [
       path: "/",
       method: "HEAD"
     },
-    category: "redirect"
+    category: "redirect",
+    displayURL: true
   },
   {
     name: "ILHEALS",
@@ -204,7 +221,8 @@ const servers = [
       method: "HEAD"
     },
     category: "site",
-    badgeID: "f3ad230c-0ccc-421e-b822-484276a3069b"
+    badgeID: "f3ad230c-0ccc-421e-b822-484276a3069b",
+    displayURL: true
   }
 ];
 
