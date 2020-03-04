@@ -18,7 +18,7 @@ const NProgress = require("nprogress");
     Element.prototype.matches = Element.prototype.msMatchesSelector;
   }
 })();
-NProgress.configure({ showSpinner: false });
+NProgress.configure({ showSpinner: true });
 
 import browserDetect from "vue-browser-detect-plugin";
 Vue.use(browserDetect);

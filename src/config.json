@@ -4,7 +4,8 @@
   "namespace": "icjia-",
   "siteTitle": "Web Status",
   "siteTitleMobile": "Web Status",
-  "deploymentURL": "https://icjia-status.netlify.com/",
+  "deploymentURL": "https://icjia-status.netlify.com",
+  "netlifyPath": "/.netlify/functions",
   "homeHeading": "WEB STATUS",
   "githubURL": "https://github.com/ICJIA/icjia-status",
   "siteDescription": "ICJIA real-time web status updates.",
@@ -19,6 +20,7 @@
     "minMatchCharLength": 2,
     "keys": ["title", "summary", "headings.heading", "type", "name"]
   },
+  "showCoronaInfo": true,
   "debug": true,
   "markdownItOptions": {
     "html": true,

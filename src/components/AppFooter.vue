@@ -1,6 +1,6 @@
 <template>
   <v-footer dark padless class="noprint">
-    <v-card
+    <!-- <v-card
       flat
       tile
       class="white--text text-center"
@@ -26,7 +26,7 @@
           </span>
         </span>
       </v-card-text>
-    </v-card>
+    </v-card> -->
     <v-card
       flat
       tile

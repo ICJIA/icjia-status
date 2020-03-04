@@ -1,10 +1,6 @@
 <template>
   <div>
-    <v-app-bar app clipped-left :flat="flat" color="white" height="90">
-      <v-app-bar-nav-icon
-        @click="toggleDrawer"
-        aria-label="Click to toggle menu"
-      />
+    <v-app-bar app clipped-left color="white" height="90">
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -40,64 +36,19 @@
         </div>
       </div>
       <v-spacer></v-spacer>
-
-      <v-btn
-        :to="link.path === '/home' ? '/' : `${link.path}`"
-        text
-        class="hidden-sm-and-down"
-        style="font-weight: 900"
-        :aria-label="link.attributes.title"
-        v-for="link in nav"
-        :key="link.attributes.title"
-      >
-        <span v-if="link.attributes.menuTitle" style="font-size: 12px">{{
-          link.attributes.menuTitle
-        }}</span>
-        <span v-else style="font-size: 12px">{{ link.attributes.title }}</span>
-      </v-btn>
-
-      <v-col class="hidden-sm-and-down">
-        <div style="width: 250px" class="">
-          <Search></Search>
-        </div>
-      </v-col>
-      <v-btn text @click="toggleSearch()" class="hidden-md-and-up">
-        <v-icon>search</v-icon>
-      </v-btn>
     </v-app-bar>
   </div>
 </template>
 
 <script>
-import _ from "lodash";
-import { EventBus } from "@/event-bus";
+// import _ from "lodash";
+// import { EventBus } from "@/event-bus";
 export default {
   data() {
-    return {
-      extended: false,
-      flat: false,
-      dialog: false,
-      nav: []
-    };
+    return {};
   },
-  created() {
-    let nav = [];
-    this.siteMeta.forEach(item => {
-      if (item.attributes.showInNav) nav.push(item);
-    });
-    let sortedNav = _.orderBy(nav, ["attributes.menuRank"], ["asc"]);
-    //console.log(nav);
-
-    this.nav = sortedNav;
-  },
+  created() {},
   computed: {
-    addAppAttr() {
-      if (this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.xs) {
-        return false;
-      } else {
-        return true;
-      }
-    },
     appTitle() {
       if (this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.xs) {
         return this.$myApp.config.siteTitleMobile;
@@ -107,34 +58,9 @@ export default {
     }
   },
 
-  mounted() {
-    EventBus.$on("unflattenNav", () => {
-      this.flat = false;
-    });
-    document.addEventListener("DOMContentLoaded", () => {
-      let arr = [
-        ...document.getElementsByClassName("v-carousel__controls__item")
-      ];
-      arr.forEach(item => {
-        item.setAttribute("aria-label", "navigation button");
-      });
-    });
-  },
-  props: {
-    siteMeta: {
-      type: Array,
-      default: () => []
-    }
-  },
+  mounted() {},
+  props: {},
   methods: {
-    toggleSearch() {
-      this.$router.push("/search").catch(() => {
-        this.$vuetify.goTo(0);
-      });
-    },
-    toggleDrawer() {
-      EventBus.$emit("toggleDrawer");
-    },
     logoWidth() {
       if (this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm) {
         return 70;

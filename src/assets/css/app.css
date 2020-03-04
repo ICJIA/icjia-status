@@ -42,3 +42,12 @@ summary {
 .hover {
   cursor: pointer;
 }
+
+#nprogress .bar {
+  position: fixed;
+  z-index: 9999;
+  top: 0 !important;
+  left: 0 !important;
+  background: #0d4474 !important;
+  height: 5px !important;
+}
