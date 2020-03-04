@@ -10,7 +10,7 @@ export async function handler(event, context) {
     "Access-Control-Allow-Credentials": "true"
   };
   const content = {
-    html: `
+    html: `<i aria-hidden="true" class="v-icon notranslate material-icons theme--light red--text">error</i>
     View up to date information on how Illinois is handling the Coronavirus Disease 2019 (COVID-19) from the <a href="http://www.dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus" style="text-decoration: underline;">Illinois Department of Public Health</a>
     `,
     markdown: `View up to date information on how Illinois is handling the Coronavirus Disease 2019 (COVID-19) from the [Illinois Department of Public Health](http://www.dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus).`

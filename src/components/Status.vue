@@ -7,10 +7,14 @@
             {{ status }}
           </div>
           <div v-else class="text-center mt-12">
+            <div style="font-weight: 900; font-size: 14px;">
+              Loading ICJIA site status
+            </div>
             <v-progress-circular
               indeterminate
               color="primary"
               size="50"
+              class="mt-12"
             ></v-progress-circular>
           </div>
         </v-col>

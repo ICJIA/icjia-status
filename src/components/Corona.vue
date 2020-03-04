@@ -1,13 +1,17 @@
 <template>
   <v-alert v-model="alert" text dismissible color="info" class="mb-0">
     <span style="color: #000 !important">
-      <v-icon color="red">error</v-icon>
       <span v-if="loading"
         ><v-progress-circular
           indeterminate
           color="primary"
+          class="ml-5"
+          size="25"
         ></v-progress-circular
-      ></span>
+        ><span style="font-size: 12px; font-weight: bold;" class="ml-5"
+          >Loading the latest COVID-19 information</span
+        ></span
+      >
       <span v-else v-html="corona.html"></span>
     </span>
   </v-alert>
