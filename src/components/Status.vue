@@ -8,7 +8,7 @@
               :headers="headers"
               :items="items"
               :items-per-page="-1"
-              class="elevation-1 hover my-8"
+              class="elevation-3 hover my-8"
               show-expand
               item-key="name"
               :single-expand="singleExpand"
