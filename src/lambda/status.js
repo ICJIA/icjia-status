@@ -37,6 +37,17 @@ const servers = [
     category: "api"
   },
   {
+    name: "SPAC",
+    proto: "https",
+    options: {
+      hostname: `spac.illinois.gov`,
+      path: "/",
+      method: "HEAD"
+    },
+    category: "site",
+    badgeID: "71c65928-9986-4104-bd78-465726edb356"
+  },
+  {
     name: "ICJIA ResearchHub api server",
     proto: "https",
     options: {
@@ -66,7 +77,8 @@ const servers = [
       path: "/",
       method: "HEAD"
     },
-    category: "web"
+    category: "site",
+    badgeID: "f93389c6-7593-495f-9309-6a3a9729eb81"
   },
   {
     name: "ICJIA GATA website",
@@ -76,8 +88,18 @@ const servers = [
       path: "/",
       method: "HEAD"
     },
-    category: "web",
-    actualPath: "https://icjia.illinois.gov/gata"
+    category: "site",
+    badgeID: "2de6c7f6-eb69-4419-baf5-7e54a8943b00"
+  },
+  {
+    name: "ICJIA GATA redirect",
+    proto: "https",
+    options: {
+      hostname: `icjia.illinois.gov`,
+      path: "/gata",
+      method: "HEAD"
+    },
+    category: "redirect"
   },
   {
     name: "ICJIA R3",
@@ -87,8 +109,18 @@ const servers = [
       path: "/",
       method: "HEAD"
     },
-    category: "web",
-    actualPath: "https://icjia.illinois.gov/r3"
+    category: "site",
+    badgeID: "90d739fc-a5ed-459d-8616-d05a6a9e235d"
+  },
+  {
+    name: "ICJIA R3 redirect",
+    proto: "https",
+    options: {
+      hostname: `icjia.illinois.gov`,
+      path: "/r3",
+      method: "HEAD"
+    },
+    category: "redirect"
   },
   {
     name: "ICJIA legacy grants",
@@ -98,7 +130,8 @@ const servers = [
       path: "/",
       method: "HEAD"
     },
-    category: "web"
+    category: "site",
+    badgeID: "36772a61-8687-4f4b-b7ed-75d6d3aeebf5"
   },
   {
     name: "ICJIA ResearchHub",
@@ -108,9 +141,19 @@ const servers = [
       path: "/",
       method: "HEAD"
     },
-    category: "web",
-    actualPath: "https://icjia.illinois.gov/researchhub"
+    category: "site"
   },
+  {
+    name: "ICJIA ResearchHub redirect",
+    proto: "https",
+    options: {
+      hostname: `icjia.illinois.gov`,
+      path: "/researchhub",
+      method: "HEAD"
+    },
+    category: "redirect"
+  },
+
   {
     name: "ICJIA ResearchHub Docs",
     proto: "https",
@@ -119,8 +162,17 @@ const servers = [
       path: "/",
       method: "HEAD"
     },
-    category: "web",
-    actualPath: "https://icjia.illinois.gov/researchhub/docs"
+    category: "site"
+  },
+  {
+    name: "ICJIA ResearchHub Docs redirect",
+    proto: "https",
+    options: {
+      hostname: `icjia.illinois.gov`,
+      path: "/researchhub/docs",
+      method: "HEAD"
+    },
+    category: "redirect"
   },
 
   {
@@ -131,8 +183,28 @@ const servers = [
       path: "/",
       method: "HEAD"
     },
-    category: "web",
-    actualPath: "https://icjia.illinois.gov"
+    category: "site"
+  },
+  {
+    name: "ICJIA public redirect",
+    proto: "https",
+    options: {
+      hostname: `icjia.illinois.gov`,
+      path: "/",
+      method: "HEAD"
+    },
+    category: "redirect"
+  },
+  {
+    name: "ILHEALS",
+    proto: "https",
+    options: {
+      hostname: `ilheals.com`,
+      path: "/",
+      method: "HEAD"
+    },
+    category: "site",
+    badgeID: "f3ad230c-0ccc-421e-b822-484276a3069b"
   }
 ];
 

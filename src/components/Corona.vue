@@ -12,7 +12,11 @@
           >Loading the latest COVID-19 information</span
         ></span
       >
-      <span v-else v-html="corona.html"></span>
+
+      <span v-if="corona && !errorMsg" v-html="corona.html"></span>
+    </span>
+    <span v-if="errorMsg" class="text-center">
+      {{ errorMsg }}
     </span>
   </v-alert>
 </template>
@@ -24,13 +28,19 @@ export default {
     return {
       alert: true,
       loading: true,
-      corona: null
+      corona: null,
+      errorMsg: null
     };
   },
   async created() {
     this.loading = true;
-    let { data } = await axios.get(`${this.$myApp.lambdaPath}/corona`);
-    this.corona = data;
+    try {
+      let { data } = await axios.get(`${this.$myApp.config.coronaInfoURL}`);
+      this.corona = data;
+    } catch (e) {
+      this.errorMsg = e;
+    }
+
     this.loading = false;
   },
   methods: {

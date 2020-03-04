@@ -2,11 +2,12 @@
   "clientBase": "https://icjia.illinois.gov",
   "publicPath": "/status",
   "namespace": "icjia-",
-  "siteTitle": "Web Status",
-  "siteTitleMobile": "Web Status",
+  "siteTitle": "Site Status",
+  "siteTitleMobile": "Site Status",
   "deploymentURL": "https://icjia-status.netlify.com",
   "netlifyPath": "/.netlify/functions",
-  "homeHeading": "WEB STATUS",
+  "coronaInfoURL": "https://icjia-status.netlify.com/.netlify/functions/corona",
+  "homeHeading": "Site STATUS",
   "githubURL": "https://github.com/ICJIA/icjia-status",
   "siteDescription": "ICJIA real-time web status updates.",
   "searchConfig": {
@@ -30,5 +31,6 @@
     "linkify": true,
     "typographer": false,
     "quotes": "“”‘’"
-  }
+  },
+  "greenStatus": [200, 204, 301, 302]
 }
