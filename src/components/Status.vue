@@ -23,9 +23,9 @@
                         style="margin: 0; padding: 5px; font-size: 14px; color: #222"
                         class="mb-5"
                       >
-                        Response headers:
+                        Response:
                       </h2>
-                      <div style="12px;">{{ item.headers }}</div>
+                      <div style="12px;">{{ item }}</div>
                     </div>
                   </v-card>
                 </td>
@@ -74,6 +74,7 @@ export default {
         },
         { text: "Category", value: "category" },
         { text: "Status", value: "status" },
+        { text: "Duration", value: "duration" },
         { text: "", value: "badgeID" }
       ]
     };
