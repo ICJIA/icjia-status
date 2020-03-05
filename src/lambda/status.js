@@ -223,6 +223,17 @@ const servers = [
     category: "site",
     badgeID: "f3ad230c-0ccc-421e-b822-484276a3069b",
     displayURL: true
+  },
+  {
+    name: "ICJIA Coronavirus Information server",
+    proto: "https",
+    options: {
+      hostname: `coronavirus.icjia-api.cloud`,
+      path: "/healthcheck",
+      method: "HEAD"
+    },
+    category: "site",
+    displayURL: true
   }
 ];
 
