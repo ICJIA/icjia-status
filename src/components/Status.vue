@@ -21,7 +21,13 @@
               </template>
 
               <template v-slot:item.badgeID="{ item }">
-                <span v-html="generateNetlifyBadge(item)"></span>
+                <img
+                  v-if="item.badgeID"
+                  :src="
+                    `https://api.netlify.com/api/v1/badges/${item.badgeID}/deploy-status`
+                  "
+                  alt="Netlify Status"
+                />
               </template>
 
               <template v-slot:item.status="{ item }">

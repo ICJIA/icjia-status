@@ -15,11 +15,11 @@ const routes = [
     name: "Home",
 
     component: () => import(/* webpackChunkName: "about" */ "../views/Home.vue")
-  },
-  {
-    path: "*",
-    redirect: "/"
   }
+  // {
+  //   path: "*",
+  //   redirect: "/"
+  // }
 ];
 
 const router = new VueRouter({
