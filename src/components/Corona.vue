@@ -36,7 +36,6 @@ export default {
   async created() {
     this.loading = true;
     try {
-      // let { data } = await axios.get(`${this.$myApp.config.coronaInfoURL}`);
       let { data } = await axios.get(`${this.$myApp.config.coronaInfoURL}`);
       this.corona = data;
     } catch (e) {
