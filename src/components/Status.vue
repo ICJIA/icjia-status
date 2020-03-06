@@ -115,7 +115,7 @@ export default {
     this.loading = true;
     NProgress.start();
     try {
-      let { data } = await axios.get(`${this.$myApp.lambdaPath}/status`);
+      let { data } = await axios.get(`${this.$myApp.config.statusServerURL}`);
       let status = data;
 
       let items = status.map(item => {
@@ -153,15 +153,6 @@ export default {
       } else {
         return "red darken-2";
       }
-    },
-    generateNetlifyBadge(item) {
-      if (!item.badgeID) return;
-      return `  <img
-              src="https://camo.githubusercontent.com/2c5ec3a1c1131650d17ff965fcb971dfe7ecdd58/68747470733a2f2f6170692e6e65746c6966792e636f6d2f6170692f76312f6261646765732f63356262343932392d643430362d346366302d613832632d6538303363336561656233342f6465706c6f792d737461747573"
-              alt="Netlify Status"
-              data-canonical-src="https://api.netlify.com/api/v1/badges/${item.badgeID}/deploy-status"
-              style="max-width:100%;"
-            />`;
     },
 
     clicked(value) {

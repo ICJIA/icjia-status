@@ -5,9 +5,10 @@
   "siteTitle": "Site Status",
   "siteTitleMobile": "Site Status",
   "deploymentURL": "https://icjia-status.netlify.com",
-  "netlifyPath": "/.netlify/functions",
+
   "coronaInfoURL": "https://coronavirus.icjia-api.cloud/",
   "homeHeading": "Site STATUS",
+  "statusServerURL": "https://status.icjia-api.cloud",
   "githubURL": "https://github.com/ICJIA/icjia-status",
   "siteDescription": "ICJIA real-time web status updates.",
   "searchConfig": {
