@@ -41,8 +41,18 @@
                   small
                   @click.stop="gotoSite(item.url)"
                   v-if="item.displayURL"
+                  >SITE
+                  <v-icon right>open_in_new</v-icon>
+                </v-btn>
+              </template>
+              <template v-slot:item.github="{ item }">
+                <v-btn
+                  text
+                  small
+                  @click.stop="gotoSite(item.github)"
+                  v-if="item.github"
                 >
-                  <v-icon>open_in_new</v-icon>
+                  <v-icon>fab fa-github</v-icon>
                 </v-btn>
               </template>
               <template v-slot:expanded-item="{ headers, item }">
@@ -106,6 +116,7 @@ export default {
         { text: "Status", value: "status", align: "center" },
         { text: "Response", value: "duration", align: "center" },
         { text: "Build Status", value: "badgeID", align: "center" },
+        { text: "Github", value: "github", align: "center" },
         { text: "URL", value: "url", align: "center" }
       ]
     };
