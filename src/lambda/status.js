@@ -41,18 +41,7 @@ const servers = [
     bageID: "c5bb4929-d406-4cf0-a82c-e803c3eaeb34"
   },
   {
-    name: "Adult Redeploy Illinois redirect",
-    proto: "https",
-    options: {
-      hostname: `icjia.illinois.gov`,
-      path: "/adultredeploy",
-      method: "HEAD"
-    },
-    category: "site",
-    displayURL: true
-  },
-  {
-    name: "Adult Redeploy Illinois redirect",
+    name: "Adult Redeploy Illinois site redirect",
     proto: "https",
     options: {
       hostname: `icjia.illinois.gov`,
@@ -134,7 +123,7 @@ const servers = [
     displayURL: false
   },
   {
-    name: "ICJIA GATA redirect",
+    name: "ICJIA GATA site redirect",
     proto: "https",
     options: {
       hostname: `icjia.illinois.gov`,
@@ -157,7 +146,7 @@ const servers = [
     displayURL: false
   },
   {
-    name: "ICJIA R3 redirect",
+    name: "ICJIA R3 site redirect",
     proto: "https",
     options: {
       hostname: `icjia.illinois.gov`,
@@ -191,7 +180,7 @@ const servers = [
     displayURL: false
   },
   {
-    name: "ICJIA ResearchHub redirect",
+    name: "ICJIA ResearchHub site redirect",
     proto: "https",
     options: {
       hostname: `icjia.illinois.gov`,
@@ -214,7 +203,7 @@ const servers = [
     displayURL: false
   },
   {
-    name: "ICJIA ResearchHub Docs redirect",
+    name: "ICJIA ResearchHub Docs site redirect",
     proto: "https",
     options: {
       hostname: `icjia.illinois.gov`,
@@ -226,7 +215,7 @@ const servers = [
   },
 
   {
-    name: "ICJIA public website",
+    name: "ICJIA public deployment",
     proto: "http",
     options: {
       hostname: `www.icjia.state.il.us`,
@@ -237,7 +226,7 @@ const servers = [
     displayURL: true
   },
   {
-    name: "ICJIA public redirect",
+    name: "ICJIA public site redirect",
     proto: "https",
     options: {
       hostname: `icjia.illinois.gov`,
@@ -248,7 +237,7 @@ const servers = [
     displayURL: true
   },
   {
-    name: "Illinois HEALS website",
+    name: "Illinois HEALS site",
     proto: "https",
     options: {
       hostname: `ilheals.com`,
