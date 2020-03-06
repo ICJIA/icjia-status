@@ -16,8 +16,9 @@ const servers = [
     category: "image",
     displayURL: true
   },
+
   {
-    name: "ARI api server",
+    name: "Adult Redeploy Illinois api server",
     proto: "https",
     options: {
       hostname: `ari.icjia-api.cloud`,
@@ -27,9 +28,43 @@ const servers = [
     category: "api",
     displayURL: true
   },
+  {
+    name: "Adult Redeploy Illinois deployment",
+    proto: "https",
+    options: {
+      hostname: `adultredeploy-dev.netlify.com`,
+      path: "/",
+      method: "HEAD"
+    },
+    category: "site",
+    displayURL: false,
+    bageID: "c5bb4929-d406-4cf0-a82c-e803c3eaeb34"
+  },
+  {
+    name: "Adult Redeploy Illinois redirect",
+    proto: "https",
+    options: {
+      hostname: `icjia.illinois.gov`,
+      path: "/adultredeploy",
+      method: "HEAD"
+    },
+    category: "site",
+    displayURL: true
+  },
+  {
+    name: "Adult Redeploy Illinois redirect",
+    proto: "https",
+    options: {
+      hostname: `icjia.illinois.gov`,
+      path: "/adultredeploy",
+      method: "HEAD"
+    },
+    category: "site",
+    displayURL: true
+  },
 
   {
-    name: "SPAC api server",
+    name: "Sentencing Policy Advisory Council api server",
     proto: "https",
     options: {
       hostname: `spac.icjia-api.cloud`,
@@ -40,7 +75,7 @@ const servers = [
     displayURL: true
   },
   {
-    name: "SPAC",
+    name: "Sentencing Policy Advisory Council website",
     proto: "https",
     options: {
       hostname: `spac.illinois.gov`,
@@ -75,7 +110,7 @@ const servers = [
   },
 
   {
-    name: "ICJIA document archive",
+    name: "ICJIA document archive website",
     proto: "https",
     options: {
       hostname: `archive.icjia.cloud`,
@@ -87,7 +122,7 @@ const servers = [
     displayURL: true
   },
   {
-    name: "ICJIA GATA website",
+    name: "ICJIA GATA deployment",
     proto: "https",
     options: {
       hostname: `gatadev.netlify.com`,
@@ -110,7 +145,7 @@ const servers = [
     displayURL: true
   },
   {
-    name: "ICJIA R3",
+    name: "ICJIA R3 deployment",
     proto: "https",
     options: {
       hostname: `icjia-r3.netlify.com`,
@@ -133,7 +168,7 @@ const servers = [
     displayURL: true
   },
   {
-    name: "ICJIA legacy grants",
+    name: "ICJIA GATA legacy website",
     proto: "https",
     options: {
       hostname: `legacy-grants.icjia.cloud`,
@@ -145,7 +180,7 @@ const servers = [
     displayURL: true
   },
   {
-    name: "ICJIA ResearchHub",
+    name: "ICJIA ResearchHub deployment",
     proto: "https",
     options: {
       hostname: `researchhub.netlify.com`,
@@ -168,7 +203,7 @@ const servers = [
   },
 
   {
-    name: "ICJIA ResearchHub Docs",
+    name: "ICJIA ResearchHub Docs deployment",
     proto: "https",
     options: {
       hostname: `researchhub-docs.netlify.com`,
@@ -191,7 +226,7 @@ const servers = [
   },
 
   {
-    name: "ICJIA public",
+    name: "ICJIA public website",
     proto: "http",
     options: {
       hostname: `www.icjia.state.il.us`,
@@ -213,7 +248,7 @@ const servers = [
     displayURL: true
   },
   {
-    name: "ILHEALS",
+    name: "Illinois HEALS website",
     proto: "https",
     options: {
       hostname: `ilheals.com`,
@@ -225,7 +260,7 @@ const servers = [
     displayURL: true
   },
   {
-    name: "ICJIA Coronavirus Information server",
+    name: "ICJIA Coronavirus Information api server",
     proto: "https",
     options: {
       hostname: `coronavirus.icjia-api.cloud`,
