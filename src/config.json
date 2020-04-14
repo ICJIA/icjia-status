@@ -6,7 +6,7 @@
   "siteTitleMobile": "Site Status",
   "deploymentURL": "https://icjia-status.netlify.com",
 
-  "coronaInfoURL": "https://coronavirus.icjia-api.cloud/",
+  "coronaInfoURL": "https://coronavirus.icjia-api.cloud/v2",
   "homeHeading": "Site STATUS",
   "statusServerURL": "https://status.icjia-api.cloud",
   "githubURL": "https://github.com/ICJIA/icjia-status",

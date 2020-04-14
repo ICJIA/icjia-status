@@ -1,5 +1,14 @@
 <template>
-  <v-alert v-model="alert" text dismissible color="info" class="mb-0">
+  <v-alert
+    icon="mdi-alert"
+    border="left"
+    prominent
+    dense
+    text
+    dismissible
+    color="info"
+    class="px-6 py-4"
+  >
     <span style="color: #000 !important">
       <span v-if="loading && !errorMsg"
         ><v-progress-circular
