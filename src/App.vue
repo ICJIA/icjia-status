@@ -2,10 +2,10 @@
   <v-app>
     <AppNav></AppNav>
 
-    <v-content>
+    <v-main>
       <Corona v-if="$myApp.config.showCoronaInfo"></Corona>
       <router-view></router-view>
-    </v-content>
+    </v-main>
     <AppFooter></AppFooter>
   </v-app>
 </template>
