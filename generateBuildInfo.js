@@ -1,10 +1,8 @@
 /* eslint-disable no-unused-vars */
 const fs = require("fs");
 const pkg = require("./package.json");
-const moment = require("moment");
-const tz = require("moment-timezone");
-const tstamp = moment();
-const chicagoTime = tstamp.tz("America/Chicago");
+var moment = require("moment-timezone");
+const chicagoTime = moment().tz("America/Chicago");
 
 const banner = `
 
