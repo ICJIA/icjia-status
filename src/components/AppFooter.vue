@@ -97,8 +97,9 @@ export default {
     this.nav = sortedNav;
   },
   methods: {
+    // eslint-disable-next-line no-unused-vars
     getPath(link) {
-      console.log(link.path);
+      //console.log(link.path);
       return "/";
     }
   },

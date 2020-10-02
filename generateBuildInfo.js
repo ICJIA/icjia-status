@@ -30,4 +30,4 @@ fs.appendFile("./dist/index.html", `${banner}`, function(err) {
   console.log("Build banner inserted.");
 });
 
-console.log(banner);
+//console.log(banner);

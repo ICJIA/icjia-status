@@ -49,7 +49,7 @@ export default {
     });
     EventBus.$on("closeDrawer", () => {
       this.drawer = false;
-      console.log("close drawer");
+      //console.log("close drawer");
     });
   },
   methods: {
