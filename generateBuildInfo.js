@@ -4,9 +4,7 @@ const pkg = require("./package.json");
 const moment = require("moment");
 const tz = require("moment-timezone");
 const tstamp = moment();
-const chicagoTime = tstamp
-  .tz("America/Chicago")
-  .format("dddd, MMMM Do YYYY, h:mm:ssa z");
+const chicagoTime = tstamp.tz("America/Chicago");
 
 const banner = `
 
@@ -30,4 +28,4 @@ fs.appendFile("./dist/index.html", `${banner}`, function(err) {
   console.log("Build banner inserted.");
 });
 
-//console.log(banner);
+console.log(banner);
