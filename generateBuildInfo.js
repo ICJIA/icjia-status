@@ -1,7 +1,7 @@
+/* eslint-disable no-unused-vars */
 const fs = require("fs");
 const pkg = require("./package.json");
 const moment = require("moment");
-// eslint-disable-next-line no-unused-vars
 const tz = require("moment-timezone");
 const tstamp = moment();
 const chicagoTime = tstamp
