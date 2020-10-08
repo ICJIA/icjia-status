@@ -4,11 +4,15 @@
       <v-row>
         <v-col>
           <div v-if="!loading && items">
+            <div class="text-right mb-2 mt-2" style="font-size: 10px;">
+              Click on a row to display status response, including response
+              headers
+            </div>
             <v-data-table
               :headers="headers"
               :items="items"
               :items-per-page="-1"
-              class="elevation-3 hover my-8"
+              class="elevation-3 hover mb-8"
               show-expand
               item-key="name"
               :single-expand="singleExpand"
