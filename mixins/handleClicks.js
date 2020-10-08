@@ -19,13 +19,13 @@ export const handleClicks = {
       if (isAFile) {
         $event.preventDefault();
         const filename = href.split("/").pop();
-        console.log("Download event: ", filename);
+        //console.log("Download event: ", filename);
         let publicPath =
           process.env.NODE_ENV === `production`
             ? this.$myApp.config.publicPath
             : "";
         let path = `${publicPath}${this.$route.meta.fileDownloadPath}${filename}`;
-        console.log("download path: ", path);
+        //console.log("download path: ", path);
 
         this.$ga.event({
           eventCategory: "File",
