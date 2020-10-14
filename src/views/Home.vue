@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-    <div class="mt-8 text-center">
+    <Status></Status>
+    <div class="mt-0 mb-10 text-center">
       For more information on status codes, please see:
       <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
         >https://developer.mozilla.org/en-US/docs/Web/HTTP/Status</a
       >
     </div>
-    <Status></Status>
   </div>
 </template>
 

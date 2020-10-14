@@ -4,9 +4,12 @@
       <v-row>
         <v-col>
           <div v-if="!loading && items">
-            <div class="text-right mb-2 mt-2" style="font-size: 10px;">
-              Click on a row to display status response, including response
-              headers
+            <div
+              class="text-left mb-2 mt-2"
+              style="font-size: 14px; font-weight: 700"
+            >
+              Monitoring {{ statusLength }} ICJIA api servers, sites, and
+              redirects.
             </div>
             <v-data-table
               :headers="headers"
@@ -109,6 +112,7 @@ export default {
       errorMsg: null,
       expanded: [],
       singleExpand: true,
+      statusLength: null,
       headers: [
         {
           text: "Name",
@@ -151,6 +155,7 @@ export default {
         return item;
       });
       this.items = _.orderBy(items, "name", "asc");
+      this.statusLength = this.items.length;
     } catch (e) {
       this.errorMsg = e.toString();
     }
