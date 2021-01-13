@@ -5,17 +5,17 @@ module.exports = {
   transpileDependencies: ["vuetify"],
   pluginOptions: {
     moment: {
-      locales: ["en"]
-    }
+      locales: ["en"],
+    },
   },
   devServer: {
     proxy: {
       "/.netlify/functions": {
         target: "http://localhost:9000",
         pathRewrite: {
-          "^/\\.netlify/functions": ""
-        }
-      }
-    }
-  }
+          "^/\\.netlify/functions": "",
+        },
+      },
+    },
+  },
 };

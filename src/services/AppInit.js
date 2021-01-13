@@ -11,7 +11,7 @@ const lambdaPath =
 let myApp = {
   config,
   computedPublicPath,
-  lambdaPath
+  lambdaPath,
 };
 
 export { myApp };

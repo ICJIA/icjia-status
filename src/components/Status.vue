@@ -8,8 +8,7 @@
               class="text-left mb-2 mt-2"
               style="font-size: 14px; font-weight: 700"
             >
-              Monitoring {{ statusLength }} ICJIA api servers, sites, and
-              redirects.
+              Monitoring {{ statusLength }} ICJIA API servers and sites.
             </div>
             <v-data-table
               :headers="headers"
@@ -30,9 +29,7 @@
               <template v-slot:item.badgeID="{ item }">
                 <img
                   v-if="item.badgeID"
-                  :src="
-                    `https://api.netlify.com/api/v1/badges/${item.badgeID}/deploy-status`
-                  "
+                  :src="`https://api.netlify.com/api/v1/badges/${item.badgeID}/deploy-status`"
                   alt="Netlify Status"
                 />
               </template>
@@ -67,7 +64,12 @@
                   <v-card class="py-2" color="grey lighten-4">
                     <div class="px-5 py-5">
                       <h2
-                        style="margin: 0; padding: 5px; font-size: 14px; color: #222"
+                        style="
+                          margin: 0;
+                          padding: 5px;
+                          font-size: 14px;
+                          color: #222;
+                        "
                         class="mb-5"
                       >
                         STATUS RESPONSE:
@@ -80,9 +82,7 @@
             </v-data-table>
           </div>
           <div v-if="loading" class="text-center mt-12">
-            <div style="font-weight: 900; font-size: 14px;">
-              Fetching status
-            </div>
+            <div style="font-weight: 900; font-size: 14px">Fetching status</div>
             <v-progress-circular
               indeterminate
               color="primary"
@@ -118,15 +118,15 @@ export default {
           text: "Name",
           align: "start",
           sortable: true,
-          value: "name"
+          value: "name",
         },
 
         { text: "Status", value: "status", align: "center" },
         { text: "Response", value: "duration", align: "center" },
         { text: "Build Status", value: "badgeID", align: "center" },
         { text: "Github", value: "github", align: "center" },
-        { text: "URL", value: "url", align: "center" }
-      ]
+        { text: "URL", value: "url", align: "center" },
+      ],
     };
   },
 
@@ -137,7 +137,7 @@ export default {
       let { data } = await axios.get(`${this.$myApp.config.statusServerURL}`);
       let status = data;
 
-      let items = status.map(item => {
+      let items = status.map((item) => {
         if (typeof item.status === "object") {
           if (item.status.code) {
             item.status = item.status.code;
@@ -186,9 +186,9 @@ export default {
           this.expanded.push(value);
         }
       }
-    }
+    },
   },
-  props: {}
+  props: {},
 };
 </script>
 

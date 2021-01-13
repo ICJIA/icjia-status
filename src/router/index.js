@@ -14,8 +14,9 @@ const routes = [
     path: "/",
     name: "Home",
 
-    component: () => import(/* webpackChunkName: "about" */ "../views/Home.vue")
-  }
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Home.vue"),
+  },
   // {
   //   path: "*",
   //   redirect: "/"
@@ -25,7 +26,7 @@ const routes = [
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 router.beforeResolve((to, from, next) => {

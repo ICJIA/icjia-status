@@ -21,8 +21,8 @@ export default {
   data() {
     return {
       loading: true,
-      coronaContent: null
+      coronaContent: null,
     };
-  }
+  },
 };
 </script>

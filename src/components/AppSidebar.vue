@@ -35,7 +35,7 @@ import _ from "lodash";
 
 export default {
   async created() {
-    let items = this.siteMeta.filter(item => {
+    let items = this.siteMeta.filter((item) => {
       return item.attributes.showInSidebar === true;
     });
 
@@ -59,20 +59,20 @@ export default {
       this.$router.push(item.path).catch(() => {
         this.$vuetify.goTo(0);
       });
-    }
+    },
   },
   props: {
     siteMeta: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
   data: () => ({
     drawer: false,
     nav: [],
     tableOfContents: [],
-    sidebarItems: null
-  })
+    sidebarItems: null,
+  }),
 };
 </script>
 <style>

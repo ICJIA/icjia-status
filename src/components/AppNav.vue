@@ -10,7 +10,7 @@
           transition="scale-transition"
           :width="logoWidth()"
           @click="
-            $router.push('/').catch(err => {
+            $router.push('/').catch((err) => {
               $vuetify.goTo(0);
             })
           "
@@ -23,11 +23,11 @@
             largeTitle:
               this.$vuetify.breakpoint.md ||
               this.$vuetify.breakpoint.lg ||
-              this.$vuetify.breakpoint.xl
+              this.$vuetify.breakpoint.xl,
           }"
           style="font-weight: 900; text-transform: uppercase"
           @click="
-            $router.push('/').catch(err => {
+            $router.push('/').catch((err) => {
               $vuetify.goTo(0);
             })
           "
@@ -55,7 +55,7 @@ export default {
       } else {
         return this.$myApp.config.siteTitle;
       }
-    }
+    },
   },
 
   mounted() {},
@@ -67,8 +67,8 @@ export default {
       } else {
         return 90;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

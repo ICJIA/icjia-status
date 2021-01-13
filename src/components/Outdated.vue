@@ -4,7 +4,7 @@
       <v-sheet class="text-center" height="200px">
         <div class="py-5" style="">
           You're using
-          <span style="font-weight: 900; ">Internet Explorer</span>.<br />
+          <span style="font-weight: 900">Internet Explorer</span>.<br />
           Internet Explorer
           <span style="font-weight: 900">will not</span> display the R3 website
           correctly. ICJIA recommends updating to a secure, modern browser.<br />Please
@@ -42,15 +42,15 @@
 export default {
   data() {
     return {
-      sheet: true
+      sheet: true,
     };
   },
   methods: {
     closeWarning() {
       this.$store.dispatch("warningSeen", true);
       this.sheet = !this.sheet;
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -31,7 +31,7 @@
       flat
       tile
       class="white--text text-center"
-      style="width: 100%; background: #0D4474"
+      style="width: 100%; background: #0d4474"
     >
       <v-divider />
 
@@ -83,12 +83,12 @@ export default {
   data: () => ({
     icons: ["fab fa-facebook", "fab fa-twitter"],
     loading: true,
-    nav: []
+    nav: [],
   }),
 
   created() {
     let nav = [];
-    this.siteMeta.forEach(item => {
+    this.siteMeta.forEach((item) => {
       if (item.attributes.showInFooter) nav.push(item);
     });
     let sortedNav = _.orderBy(nav, ["attributes.menuRank"], ["asc"]);
@@ -101,14 +101,14 @@ export default {
     getPath(link) {
       //console.log(link.path);
       return "/";
-    }
+    },
   },
   props: {
     siteMeta: {
       type: Array,
-      default: () => []
-    }
-  }
+      default: () => [],
+    },
+  },
 };
 </script>
 

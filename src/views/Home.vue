@@ -18,8 +18,8 @@ export default {
     this.$ga.page({
       page: this.$route.path,
       title: "Home",
-      location: window.location.href
+      location: window.location.href,
     });
-  }
+  },
 };
 </script>
