@@ -14,7 +14,7 @@
               :headers="headers"
               :items="items"
               :items-per-page="-1"
-              class="elevation-3 hover mb-8"
+              class="elevation-3 hover mb-8 statusTable"
               show-expand
               item-key="name"
               :single-expand="singleExpand"
@@ -30,7 +30,7 @@
                 <img
                   v-if="item.badgeID"
                   :src="`https://api.netlify.com/api/v1/badges/${item.badgeID}/deploy-status`"
-                  alt="Netlify Status"
+                  :alt="`Netlify build status image for ${item.name}`"
                 />
               </template>
 
@@ -55,6 +55,7 @@
                   small
                   @click.stop="gotoSite(item.github)"
                   v-if="item.github"
+                  class="github"
                 >
                   <v-icon>fab fa-github</v-icon>
                 </v-btn>
@@ -100,9 +101,12 @@
 </template>
 
 <script>
+/* eslint-disable no-unused-vars */
+
 import _ from "lodash";
 import axios from "axios";
 import NProgress from "nprogress";
+import { addButtonText, fixBlankTableHeadings } from "@/a11y";
 export default {
   data() {
     return {
@@ -129,6 +133,7 @@ export default {
       ],
     };
   },
+  mounted() {},
 
   async created() {
     this.loading = true;
@@ -161,17 +166,31 @@ export default {
     }
 
     this.loading = false;
+
     NProgress.done();
   },
+  watch: {
+    async loading(newValue) {
+      if (!newValue) {
+        await this.$nextTick();
+        this.fixA11Y();
+      }
+    },
+  },
   methods: {
+    fixA11Y() {
+      addButtonText("v-data-table__expand-icon", "Show/Hide information");
+      addButtonText("github", "Go to Github");
+      fixBlankTableHeadings();
+    },
     gotoSite(url) {
       window.open(url);
     },
     getStatusColor(status) {
       if (this.$myApp.config.greenStatus.includes(status)) {
-        return "green darken-2";
+        return "green darken-4";
       } else {
-        return "red darken-2";
+        return "red darken-4";
       }
     },
 
